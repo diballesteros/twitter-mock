@@ -1,0 +1,7 @@
+.list  {
+    width: 600px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-color: rgb(230, 236, 240);
+    border-style: solid;
+}
