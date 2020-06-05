@@ -1,0 +1,29 @@
+.dashboard {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+}
+
+.left_section {
+    flex-grow: 1;
+}
+
+.center_section {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    height: calc(100% - 171px);
+    overflow: hidden;
+}
+
+.center_section .home_container {
+    height: 53px;
+}
+
+.center_section .editor_container {
+    height: 118px;
+}
+
+.right-section {
+    flex-grow: 1;
+}

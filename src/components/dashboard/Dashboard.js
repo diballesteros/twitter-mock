@@ -12,8 +12,23 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div className="">
-                <List />
+            <div className="dashboard">
+                <div className="left_section">
+
+                </div>
+                <div className="center_section">
+                    <div className="home_container">
+                        <label>Home</label>
+                    </div>
+                    <div className="editor_container">
+                        <label>Editor</label>
+                    </div>
+                    <List />
+                </div>
+                <div className="right_section">
+
+                </div>
+                
             </div>
         );
     };

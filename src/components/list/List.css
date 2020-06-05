@@ -1,7 +1,12 @@
 .list  {
     width: 600px;
+    min-width: 600px;
+    justify-self: center;
     border-left-width: 1px;
     border-right-width: 1px;
     border-color: rgb(230, 236, 240);
     border-style: solid;
+    height: calc(100% - 171px);
+    max-height: calc(100% - 171px);
+    overflow: hidden;
 }
