@@ -2,7 +2,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
-    width: 600px;
+    width: 100%;
     border-bottom: 1px solid rgb(230, 236, 240);
     cursor: pointer;
 }

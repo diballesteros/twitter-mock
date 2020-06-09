@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Dashboard.css';
 import List from '../list/List';
+import Editor from '../editor/Editor';
 
 class Dashboard extends Component {
     constructor (props) {
@@ -18,10 +19,10 @@ class Dashboard extends Component {
                 </div>
                 <div className="center_section">
                     <div className="home_container">
-                        <label>Home</label>
+                        <h2>Home</h2>
                     </div>
                     <div className="editor_container">
-                        <label>Editor</label>
+                        <Editor />
                     </div>
                     <List />
                 </div>
