@@ -33,6 +33,12 @@
     padding-bottom: 10px;
 }
 
+.editor_input-container {
+    display: flex;
+    align-items: center;
+    height: 59px;
+}
+
 .editor_input-container input {
     flex-basis: auto;
     border: 0px none;
@@ -45,4 +51,10 @@
 
 .editor_input-container ::placeholder{
     color: #9197a3;
+}
+
+.editor_buttons-container {
+    display: flex;
+    flex-flow: row;
+    height: 49px;
 }
