@@ -5,8 +5,14 @@
 }
 
 .left_section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
     flex-grow: 1;
     height: 100%;
+    width: 275px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .center_section {
@@ -40,4 +46,9 @@
 .right_section {
     flex-grow: 1;
     height: 100%;
+}
+
+.separator {
+    height: 10px;
+    background-color: rgb(230, 236, 240);
 }

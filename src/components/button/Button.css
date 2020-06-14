@@ -1,0 +1,21 @@
+.button_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 37px;
+    background-color: rgb(29, 161, 242);
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    cursor: pointer;
+}
+
+.button_container span {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+ 
+   

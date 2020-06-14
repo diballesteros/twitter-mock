@@ -1,5 +1,6 @@
 import React from 'react';
 import './Editor.css';
+import Button from '../button/Button';
 import profilePicture from '../../constants/img/Profile_picture.jpg';
 
 const Editor = (props) => (
@@ -12,10 +13,7 @@ const Editor = (props) => (
                 <input type="text" placeholder="What's happening?"/>
             </div>
             <div className="editor_buttons-container">
-                <div>
-
-                </div>
-                <button></button>
+                <Button>Tweet</Button>
             </div>
         </div>
     </div>

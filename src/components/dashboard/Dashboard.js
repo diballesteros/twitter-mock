@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Dashboard.css';
 import List from '../list/List';
 import Editor from '../editor/Editor';
+import Option from '../option/Option';
+import Button from '../button/Button';
 
 class Dashboard extends Component {
     constructor (props) {
@@ -15,7 +17,16 @@ class Dashboard extends Component {
         return (
             <div className="dashboard">
                 <div className="left_section">
-
+                    <div>
+                        Icon
+                    </div>
+                    <div>
+                        <Option>Home</Option>
+                        <Option>Notification</Option>
+                        <Option>Messages</Option>
+                        <Option>Profile</Option>
+                    </div>
+                   <Button>Tweet</Button>
                 </div>
                 <div className="center_section">
                     <div className="home_container">
@@ -24,6 +35,7 @@ class Dashboard extends Component {
                     <div className="editor_container">
                         <Editor />
                     </div>
+                    <div className="separator"></div>
                     <List />
                 </div>
                 <div className="right_section">
