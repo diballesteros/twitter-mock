@@ -18,15 +18,19 @@ class Dashboard extends Component {
             <div className="dashboard">
                 <div className="left_section">
                     <div>
-                        Icon
+                        <div>
+                            Icon
+                        </div>
+                        <div>
+                            <Option>Home</Option>
+                            <Option>Notification</Option>
+                            <Option>Messages</Option>
+                            <Option>Profile</Option>
+                        </div>
+                        <div className="left_section_button-container">
+                            <Button>Tweet</Button>
+                        </div> 
                     </div>
-                    <div>
-                        <Option>Home</Option>
-                        <Option>Notification</Option>
-                        <Option>Messages</Option>
-                        <Option>Profile</Option>
-                    </div>
-                   <Button>Tweet</Button>
                 </div>
                 <div className="center_section">
                     <div className="home_container">

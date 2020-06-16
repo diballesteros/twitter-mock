@@ -62,3 +62,8 @@
     justify-content: flex-end;
     height: 49px;
 }
+
+.editor_buttons-container > div {
+    width: 64px;
+    height: 39px;
+}

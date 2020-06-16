@@ -10,9 +10,21 @@
     align-items: flex-end;
     flex-grow: 1;
     height: 100%;
-    width: 275px;
+}
+
+.left_section > div {
+    height: 100%;
+    width: 235px;
     padding-left: 20px;
     padding-right: 20px;
+    position: fixed;
+}
+
+.left_section .left_section_button-container {
+    width: 90%;
+    height: 49px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .center_section {

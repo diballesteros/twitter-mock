@@ -13,7 +13,9 @@ const Editor = (props) => (
                 <input type="text" placeholder="What's happening?"/>
             </div>
             <div className="editor_buttons-container">
+               <div>
                 <Button>Tweet</Button>
+               </div>      
             </div>
         </div>
     </div>
