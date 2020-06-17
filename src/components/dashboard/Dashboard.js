@@ -6,8 +6,8 @@ import Option from '../option/Option';
 import Button from '../button/Button';
 
 class Dashboard extends Component {
-    constructor (props) {
-        super (props);
+    constructor(props) {
+        super(props);
         this.state = {
 
         }
@@ -22,14 +22,13 @@ class Dashboard extends Component {
                             Icon
                         </div>
                         <div>
-                            <Option>Home</Option>
-                            <Option>Notification</Option>
-                            <Option>Messages</Option>
-                            <Option>Profile</Option>
+                            <Option type="home">Home</Option>
+                            <Option type="message">Messages</Option>
+                            <Option type="profile">Profile</Option>
                         </div>
                         <div className="left_section_button-container">
                             <Button>Tweet</Button>
-                        </div> 
+                        </div>
                     </div>
                 </div>
                 <div className="center_section">
@@ -45,7 +44,6 @@ class Dashboard extends Component {
                 <div className="right_section">
 
                 </div>
-                
             </div>
         );
     };
