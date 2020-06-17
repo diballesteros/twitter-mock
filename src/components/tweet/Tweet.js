@@ -17,23 +17,26 @@ const Tweet = ({ tweetContent }) => (
             <span className="tweet_text">{tweetContent.text}</span>
             <span className="tweet_image">{tweetContent.Image}</span>
             <div className="tweet_interact-container">
-                <div>
-                    <div>
-                        <Icon group="TWEET" icon="reply" width="19" height="19" color="#14171a" />
+                <div className="tweet_interact-container-reply">
+                    <div className="tweet_interact-container-highlight"></div>
+                    <div className="tweet_interact-icon_container">
+                        <Icon group="TWEET" icon="reply" width="19" height="19" color="#657786" />
                     </div>
-                    <span className="tweet_reply">{tweetContent.replies}</span>
+                    <span>{tweetContent.replies}</span>
                 </div>
-                <div>
-                    <div>
-                        <Icon group="TWEET" icon="retweet" width="19" height="19" color="#14171a" />
+                <div className="tweet_interact-container-retweet">
+                    <div className="tweet_interact-container-highlight"></div>
+                    <div className="tweet_interact-icon_container">
+                        <Icon group="TWEET" icon="retweet" width="19" height="19" color="#657786" />
                     </div>
-                    <span className="tweet_retweet">{tweetContent.retweets}</span>
+                    <span>{tweetContent.retweets}</span>
                 </div>
-                <div>
-                    <div>
-                        <Icon group="TWEET" icon="like" width="19" height="19" color="#14171a" />
+                <div className="tweet_interact-container-like">
+                    <div className="tweet_interact-container-highlight"></div>
+                    <div className="tweet_interact-icon_container">
+                        <Icon group="TWEET" icon="like" width="19" height="19" color="#657786" />
                     </div>
-                    <span className="tweet_like">{tweetContent.likes}</span>
+                    <span>{tweetContent.likes}</span>
                 </div>
             </div>
         </div>

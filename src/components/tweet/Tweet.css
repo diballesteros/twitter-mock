@@ -34,6 +34,7 @@
     margin-left: 5px;
     margin-right: 5px;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .tweet_user-container {
@@ -64,14 +65,62 @@
     justify-content: space-between;
     max-width: 425px;
     margin-top: 10px;
+    
 }
 
-.tweet_interact-container div {
+.tweet_interact-container-highlight {
+    position: absolute;
+    display: inline-flex;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    margin: -8px -8px -8px -8px;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;    
+}
+
+.tweet_interact-container > div {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
 }
 
-.tweet_interact-container div div {
+.tweet_interact-container div .tweet_interact-icon_container {
+    display: flex;
     margin-right: 10px;
+}
+
+.tweet_interact-container div span {
+    color: rgb(101, 119, 134);
+}
+
+.tweet_interact-container-reply:hover span {
+    color: rgb(29, 161, 242);
+}
+
+.tweet_interact-container-reply:hover .tweet_interact-container-highlight {
+    background-color: rgb(29, 161, 242);
+}
+
+.tweet_interact-container-reply:hover path {
+    fill: rgb(29, 161, 242);
+}
+
+.tweet_interact-container-retweet:hover span {
+    color: rgb(23, 191, 99);
+}
+
+.tweet_interact-container-retweet:hover path {
+    fill: rgb(23, 191, 99);
+}
+
+.tweet_interact-container-like:hover span {
+    color: rgb(226, 36, 94);
+}
+
+.tweet_interact-container-like:hover path {
+    fill: rgb(226, 36, 94);
 }
