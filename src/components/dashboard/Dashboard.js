@@ -3,6 +3,7 @@ import './Dashboard.css';
 import List from '../list/List';
 import Editor from '../editor/Editor';
 import Option from '../option/Option';
+import Search from '../search/Search';
 import Button from '../button/Button';
 import Icon from '../icon/Icon';
 
@@ -43,7 +44,17 @@ class Dashboard extends Component {
                     <List />
                 </div>
                 <div className="right_section">
-
+                    <div>
+                        <div className="search_container">
+                            <Search />
+                        </div>
+                        <div className="whats-happening_container">
+                            Grouper What's Happening
+                        </div>
+                        <div className="who-to-follow_container">
+                            Grouper Who to Follow
+                        </div>
+                    </div>
                 </div>
             </div>
         );
