@@ -19,6 +19,14 @@
     padding-right: 20px;
     position: fixed;
 }
+.left_section .left_section_home-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
 
 .left_section .left_section_button-container {
     width: 90%;

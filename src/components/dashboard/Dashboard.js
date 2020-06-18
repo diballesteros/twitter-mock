@@ -4,6 +4,7 @@ import List from '../list/List';
 import Editor from '../editor/Editor';
 import Option from '../option/Option';
 import Button from '../button/Button';
+import Icon from '../icon/Icon';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -18,8 +19,8 @@ class Dashboard extends Component {
             <div className="dashboard">
                 <div className="left_section">
                     <div>
-                        <div>
-                            Icon
+                        <div className="left_section_home-button">
+                            <Icon group="GENERAL" icon="dog" width="45" height="28" color="#1da1f2" />
                         </div>
                         <div>
                             <Option type="home">Home</Option>
