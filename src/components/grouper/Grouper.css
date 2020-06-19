@@ -1,0 +1,35 @@
+.grouper {
+    margin-bottom: 15px;
+    border-color: rgb(245, 248, 250);
+    border-radius: 14px;
+    border-width: 1px;
+    border-style: solid;
+    background-color: rgb(245, 248, 250);
+}
+
+.grouper_header {
+    border-bottom-color: rgb(230, 236, 240);
+    border-bottom-width: 1px;
+}
+
+.grouper_header-inner {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.grouper_header-inner h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.grouper_header-inner h2 .grouper_header-text {
+    color: rgb(20, 23, 26);
+    font-weight: 800;
+    font-size: 19px;
+}

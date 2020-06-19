@@ -1,42 +1,33 @@
 .search-bar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     flex-shrink: 1;
     flex-grow: 1;
     background-color: rgb(230, 236, 240);
-    border-bottom-left-radius: 9999px;
-    border-bottom-right-radius: 9999px;
-    border-top-left-radius: 9999px;
-    border-top-right-radius: 9999px;
-    border-bottom-width: 1px;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-top-width: 1px;
-    border-bottom-color: rgba(0, 0, 0, 0);
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-style: solid;
-    border-left-style: solid;
-    border-right-style: solid;
-    border-top-style: solid;
+    border-radius : 9999px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    border-style: solid;
 }
 
 .search-bar input {
     outline-style: none;
     width: 100%;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-    border-right-width: 0px;
-    border-top-width: 0px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
+    border-radius: 0px;
+    border-width: 0px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0);
+    color: rgb(20, 23, 26);
+    font-weight: 400px;
+    font-size: 15px;
+}
+
+.search-bar_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar_icon svg{
+    padding-left: 10px;
 }

@@ -4,10 +4,10 @@ import Icon from '../icon/Icon';
 
 const Search = (props) => (
     <div className="search-bar">
-        <div>
+        <div className="search-bar_icon">
             <Icon group="SEARCH" icon="loop" width="20" height="20"/>
         </div>
-        <div>
+        <div className="search-bar_input">
             <input placeholder="Search Pandi"/>
         </div>
     </div>

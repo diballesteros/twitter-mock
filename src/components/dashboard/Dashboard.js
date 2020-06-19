@@ -4,6 +4,7 @@ import List from '../list/List';
 import Editor from '../editor/Editor';
 import Option from '../option/Option';
 import Search from '../search/Search';
+import Grouper from '../grouper/Grouper';
 import Button from '../button/Button';
 import Icon from '../icon/Icon';
 
@@ -49,10 +50,10 @@ class Dashboard extends Component {
                             <Search />
                         </div>
                         <div className="whats-happening_container">
-                            Grouper What's Happening
+                            <Grouper />
                         </div>
                         <div className="who-to-follow_container">
-                            Grouper Who to Follow
+                            <Grouper />
                         </div>
                     </div>
                 </div>
