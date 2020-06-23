@@ -1,4 +1,4 @@
-a {
+a.option {
     display: flex;
     align-items: flex-start;
     text-decoration: none;
@@ -6,7 +6,7 @@ a {
     padding-top: 7px;
 }
 
-a > div {
+a.option > div {
     display: flex;
     position: relative;
     flex-direction: row;
@@ -20,11 +20,11 @@ a > div {
     border-top-right-radius: 9999px;
 }
 
-a:hover > div {
+a.option:hover > div {
     background-color: rgb(29, 161, 242, 0.1);
 }
 
-a:hover .option_container-text {
+a.option:hover .option_container-text {
     color: rgb(29, 161, 242);
 }
 
@@ -36,6 +36,6 @@ a:hover .option_container-text {
     margin-right: 15px;
 }
 
-a:hover .option_container-icon path {
+a.option:hover .option_container-icon path {
     fill: rgb(29, 161, 242);
 }

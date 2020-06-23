@@ -1,0 +1,27 @@
+.center {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    height: 100%;
+    width: 617px;
+    max-width: 617px;
+    border-left: 1px rgb(230, 236, 240) solid;
+    border-right: 1px rgb(230, 236, 240) solid;
+}
+
+.center .center_title {
+    display: flex;
+    align-items: center;
+    height: 53px;
+    border-bottom: 1px rgb(230, 236, 240) solid;
+}
+
+.center .center_section {
+    height: 118px;
+    border-bottom: 1px rgb(230, 236, 240) solid;
+}
+
+.center_separator {
+    height: 10px;
+    background-color: rgb(230, 236, 240);
+}

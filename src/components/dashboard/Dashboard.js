@@ -7,6 +7,8 @@ import Search from '../search/Search';
 import Grouper from '../grouper/Grouper';
 import Button from '../button/Button';
 import Icon from '../icon/Icon';
+import Center from '../center/Center';
+import Home from '../home/Home';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -19,7 +21,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="dashboard">
-                <div className="left_section">
+                <header className="left_section">
                     <div>
                         <div className="left_section_home-button">
                             <Icon group="GENERAL" icon="dog" width="45" height="28" color="#1da1f2" />
@@ -33,30 +35,37 @@ class Dashboard extends Component {
                             <Button>Tweet</Button>
                         </div>
                     </div>
-                </div>
-                <div className="center_section">
-                    <div className="home_container">
-                        <h2>Home</h2>
-                    </div>
-                    <div className="editor_container">
-                        <Editor />
-                    </div>
-                    <div className="separator"></div>
-                    <List />
-                </div>
-                <div className="right_section">
-                    <div>
-                        <div className="search_container">
-                            <Search />
+                </header>
+                <main className="banner">
+                    <div className="banner_container">
+                        <div className="banner_divider">
+                            <Center
+                                header={
+                                    <Home />
+                                }
+                                section={
+                                    <Editor />
+                                }
+                                body={
+                                    <List />
+                                }
+                            />
+                            <div className="right_section">
+                                <div>
+                                    <div className="search_container">
+                                        <Search />
+                                    </div>
+                                    <div className="whats-happening_container">
+                                        <Grouper />
+                                    </div>
+                                    <div className="who-to-follow_container">
+                                        <Grouper />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="whats-happening_container">
-                            <Grouper />
-                        </div>
-                        <div className="who-to-follow_container">
-                            <Grouper />
-                        </div>
                     </div>
-                </div>
+                </main>    
             </div>
         );
     };

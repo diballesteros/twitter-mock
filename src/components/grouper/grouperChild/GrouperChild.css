@@ -1,0 +1,82 @@
+.grouperChild {
+    border-bottom-color: rgb(230, 236, 240);
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.grouperChild a {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    outline-style: none;
+    cursor: pointer;
+
+}
+
+.grouperChild .grouperChild_text-container {
+    margin-right: 10px;
+    display: flex;
+    flex-basis: 0%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: column;
+}
+
+.grouperChild .grouperChild_text-container .grouperChild_category {
+    display: flex;
+    align-items: center;
+    flex-shrink: 1;
+    flex-direction: row;
+}
+
+.grouperChild_category .grouperChild_trend-type {
+    line-height: 20px;
+    font-size: 13px;
+    color: rgb(101, 119, 134);
+    font-weight: 400;
+}
+
+.grouperChild_category .grouperChild_dot {
+    color: rgb(101, 119, 134);
+    font-weight: 400;
+    flex-shrink: 0;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.grouperChild_category .grouperChild_time-place {
+    line-height: 20px;
+    font-size: 13px;
+    color: rgb(101, 119, 134);
+    font-weight: 400;
+}
+
+.grouperChild .grouperChild_text-container .grouperChild_main {
+    display: inline;
+    color: rgb(20, 23, 26);
+    font-weight: bold;
+    font-size: 15px;
+    margin: 2px 0 2px 0;
+}
+
+.grouperChild_picture-container {
+    width: 15%;
+    min-width: 69px;
+    min-height: 69px;
+    max-width: 98px;
+    max-height: 98px;
+    height: 15%;
+    background-color: rgb(204, 214, 221);
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+

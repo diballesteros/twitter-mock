@@ -2,14 +2,14 @@ import React from 'react';
 import Icon from '../icon/Icon';
 import './Option.css';
 
-const Option = (props) => (
-    <a href="/#">
+const Option = ({type, children}) => (
+    <a className="option" href="/#">
         <div>
             <div className="option_container-icon">
-                <Icon group="OPTIONS" icon={props.type} width="26" height="26" color="#14171a" />
+                <Icon group="OPTIONS" icon={type} width="26" height="26" color="#14171a" />
             </div>
             <div className="option_container-text">
-                {props.children}
+                {children}
             </div>
         </div>
     </a>
