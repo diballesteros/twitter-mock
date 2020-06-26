@@ -1,39 +1,9 @@
 .dashboard {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
+    position: relative;
     height: 100vh;
-}
-
-.left_section {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-end;
-    flex-grow: 1;
-    height: 100%;
-}
-
-.left_section > div {
-    height: 100%;
-    width: 235px;
-    padding-left: 20px;
-    padding-right: 20px;
-    position: fixed;
-}
-
-.left_section .left_section_home-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-}
-
-.left_section .left_section_button-container {
-    width: 90%;
-    height: 49px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    width: 100%;
 }
 
 .banner {
@@ -44,11 +14,12 @@
     flex-grow: 1;
     flex-direction: column;
     flex-basis: auto;
-   
+    position: relative;
 }
 
 .banner .banner_container {
     display: flex;
+    position: relative;
     width: 990px;
     height: 100%;
     flex-direction: column;
@@ -58,28 +29,11 @@
 
 .banner .banner_container .banner_divider {
     display: flex;
+    position: relative;
+    align-items: stretch;
     justify-content: space-between;
     flex-grow: 1;
     flex-direction: row;
     width: 100%;
     min-height: 100%;
-}
-
-.right_section {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    width: 350px;
-    height: 100%;
-}
-
-.right_section > div {
-    width: 100%;
-}
-
-.right_section .search_container {
-    display: flex;
-    align-items: center;
-    height: 53px;
-    margin-bottom: 10px;
 }

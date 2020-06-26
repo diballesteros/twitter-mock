@@ -131,3 +131,31 @@ export const TWEETCONTENT = [
         likes: 4
     }
 ]
+
+// What's Happening
+export const HAPPENING = [
+    {   
+        user: 'NASCAR',
+        location: 'United States',
+        text: 'NASCAR releases a photo of the rope fashioned like a noose found in Bubba Wallaces garage',
+        time: '3 hours ago'
+    },
+    {
+        user: 'NASCAR',
+        location: 'United States',
+        text: 'NASCAR releases a photo of the rope fashioned like a noose found in Bubba Wallaces garage',
+        time: '3 hours ago'
+    },
+    {
+        user: 'NASCAR',
+        location: 'United States',
+        text: 'NASCAR releases a photo of the rope fashioned like a noose found in Bubba Wallaces garage',
+        time: '3 hours ago'
+    },
+    {
+        user: 'NASCAR',
+        location: 'United States',
+        text: 'NASCAR releases a photo of the rope fashioned like a noose found in Bubba Wallaces garage',
+        time: '3 hours ago'
+    }
+]

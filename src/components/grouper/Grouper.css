@@ -1,4 +1,9 @@
 .grouper {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-basis: auto;
+    position: relative;
     margin-bottom: 15px;
     border-color: rgb(245, 248, 250);
     border-radius: 14px;
@@ -8,6 +13,9 @@
 }
 
 .grouper_header {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
     border-bottom-color: rgb(230, 236, 240);
     border-bottom-width: 1px;
     border-style: solid;
