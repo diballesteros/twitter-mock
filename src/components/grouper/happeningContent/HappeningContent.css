@@ -1,4 +1,4 @@
-.grouperChild {
+.happeningContent {
     position: relative;
     border-bottom-color: rgb(230, 236, 240);
     border-bottom-width: 1px;
@@ -7,8 +7,7 @@
     border-left: none;
     border-right: none;
 }
-
-.grouperChild a {
+.happeningContent a {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -21,7 +20,7 @@
     text-decoration: none;
 }
 
-.grouperChild .grouperChild_text-container {
+.happeningContent .happeningContent_text-container {
     margin-right: 10px;
     display: flex;
     flex-basis: 0%;
@@ -30,21 +29,21 @@
     flex-direction: column;
 }
 
-.grouperChild .grouperChild_text-container .grouperChild_category {
+.happeningContent .happeningContent_text-container .happeningContent_category {
     display: flex;
     align-items: center;
     flex-shrink: 1;
     flex-direction: row;
 }
 
-.grouperChild_category .grouperChild_trend-type {
+.happeningContent_category .happeningContent_trend-type {
     line-height: 20px;
     font-size: 13px;
     color: rgb(101, 119, 134);
     font-weight: 400;
 }
 
-.grouperChild_category .grouperChild_dot {
+.happeningContent_category .happeningContent_dot {
     color: rgb(101, 119, 134);
     font-weight: 400;
     flex-shrink: 0;
@@ -53,14 +52,14 @@
     padding-right: 5px;
 }
 
-.grouperChild_category .grouperChild_time-place {
+.happeningContent_category .happeningContent_time-place {
     line-height: 20px;
     font-size: 13px;
     color: rgb(101, 119, 134);
     font-weight: 400;
 }
 
-.grouperChild .grouperChild_text-container .grouperChild_main {
+.happeningContent .happeningContent_text-container .happeningContent_main {
     display: inline;
     color: rgb(20, 23, 26);
     font-weight: bold;
@@ -68,7 +67,7 @@
     margin: 2px 0 2px 0;
 }
 
-.grouperChild_picture-container {
+.happeningContent_picture-container {
     position: relative;
     width: 15%;
     min-width: 69px;
@@ -83,14 +82,14 @@
     border-top-right-radius: 14px;
 }
 
-.grouperChild_picture-container div {
+.happeningContent_picture-container div {
     display: flex;
     height: 100%;
     width: 100%;
     position: relative;
 }
 
-.grouperChild_picture-container div img {
+.happeningContent_picture-container div img {
     height: 100%;
     width: 100%;
 }

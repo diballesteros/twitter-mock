@@ -130,11 +130,11 @@ export const TWEETCONTENT = [
         retweets: 1,
         likes: 4
     }
-]
+];
 
 // What's Happening
 export const HAPPENING = [
-    {   
+    {
         user: 'NASCAR',
         location: 'United States',
         text: 'NASCAR releases a photo of the rope fashioned like a noose found in Bubba Wallaces garage',
@@ -158,4 +158,26 @@ export const HAPPENING = [
         text: 'NASCAR releases a photo of the rope fashioned like a noose found in Bubba Wallaces garage',
         time: '3 hours ago'
     }
-]
+];
+
+// Who to Follow
+export const FOLLOW = [
+    {
+        user: {
+            name: 'Adam Hann',
+            tag: '@1975hann'
+        }
+    },
+    {
+        user: {
+            name: 'Adam Hann',
+            tag: '@1975hann'
+        }
+    },
+    {
+        user: {
+            name: 'Adam Hann',
+            tag: '@1975hann'
+        }
+    }
+];

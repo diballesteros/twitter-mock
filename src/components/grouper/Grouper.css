@@ -38,6 +38,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    margin: 0;
 }
 
 .grouper_header-inner h2 .grouper_header-text {

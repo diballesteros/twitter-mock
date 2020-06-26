@@ -1,0 +1,9 @@
+.followContent {
+    position: relative;
+    border-bottom-color: rgb(230, 236, 240);
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}

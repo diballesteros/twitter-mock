@@ -10,10 +10,10 @@ const RightSection = () => (
                 <Search />
             </div>
             <div className="whats-happening_container">
-                <Grouper title="What's happening"/>
+                <Grouper title="What's happening" type="happening"/>
             </div>
             <div className="who-to-follow_container">
-                <Grouper title="Who to follow"/>
+                <Grouper title="Who to follow" type="follow"/>
             </div>
         </div>
     </div>
