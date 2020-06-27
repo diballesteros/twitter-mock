@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Login.css';
+import Navbar from '../navbar/Navbar';
 
 class Login extends Component {
     constructor(props) {
@@ -12,7 +13,7 @@ class Login extends Component {
     render () {
         return (
             <div>
-
+                <Navbar />
             </div>
         );
     };
