@@ -22,9 +22,7 @@ const HappeningContent = ({ grouperContent }) => (
                 </div>
             </div>
             <div className="happeningContent_picture-container">
-                <div>
-                    <img src={nascarPicture} alt='trendingpicture'></img>
-                </div>
+                <img src={nascarPicture} alt='trendingpicture'></img>
             </div>
         </a>
     </div>

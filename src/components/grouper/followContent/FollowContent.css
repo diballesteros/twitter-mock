@@ -6,4 +6,69 @@
     border-top: none;
     border-left: none;
     border-right: none;
+    padding: 15px 10px 15px 10px;
+}
+
+.followContent_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.followContent_image {
+    display: flex;
+    flex-basis: 50px;
+    min-width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-grow: 0;
+    position: relative;
+}
+
+.followContent_image img {
+    height: 49px;
+    width: 49px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.followContent_details {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 0px;
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.followContent_user {
+    display: flex;
+    flex-direction: column;
+    outline-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    flex-shrink: 1;
+    max-width: 100%;
+}
+
+.followContent_user-name {
+    color: rgb(20, 23, 26);
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.followContent_user-tag {
+    color: rgb(101, 119, 134);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.followContent_button {
+    width: 80px;
+    margin-left: 10px;
+    height: 30px;
 }
