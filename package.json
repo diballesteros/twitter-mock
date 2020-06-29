@@ -10,8 +10,8 @@
     "@typescript-eslint/parser": "2.x",
     "babel-eslint": "10.x",
     "eslint": "6.x",
-    "eslint-config-airbnb": "18.2.0",
     "eslint-config-react-app": "5.2.1",
+    "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-flowtype": "4.0.0",
     "eslint-plugin-import": "2.x",
     "eslint-plugin-jsx-a11y": "6.x",
@@ -42,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.2.0"
   }
 }

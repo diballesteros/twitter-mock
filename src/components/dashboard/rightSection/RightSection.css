@@ -4,6 +4,8 @@
     align-items: flex-start;
     width: 350px;
     height: 100%;
+    overflow-y: scroll;
+    overflow-x: none;
 }
 
 .right_section > div {
@@ -19,4 +21,26 @@
     align-items: center;
     height: 53px;
     margin-bottom: 10px;
+}
+
+.right_section::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.right_section::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.right_section::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
 }
