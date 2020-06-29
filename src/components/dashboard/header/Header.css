@@ -7,8 +7,8 @@
 }
 
 .header > div {
-    justify-content: space-between;
     display: flex;
+    justify-content: space-between;
     flex-basis: auto;
     flex-direction: column;
     position: relative;
@@ -28,9 +28,21 @@
     cursor: pointer;
 }
 
+.header .header_home-button:hover {
+    background-color: rgba(29,161, 242, 0.1);
+    border-radius: 9999px;
+}
+
 .header .header_button-container {
     width: 90%;
     height: 49px;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+.header_logout {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }

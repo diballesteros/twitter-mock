@@ -6,7 +6,13 @@
     border-top: none;
     border-left: none;
     border-right: none;
+    cursor: pointer;
 }
+
+.happeningContent:hover {
+    background-color: rgba(0,0,0,0.03);
+}
+
 .happeningContent a {
     display: flex;
     flex-direction: row;

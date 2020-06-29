@@ -20,6 +20,9 @@ const Header = () => (
                     <Button>Tweet</Button>
                 </div>
             </div>
+            <div className="header_button-container ">
+                <Button>Log Out</Button>
+            </div>
         </div>
     </header>
 );
