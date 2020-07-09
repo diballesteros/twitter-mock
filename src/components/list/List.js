@@ -1,26 +1,44 @@
 import React from 'react';
 import './List.css';
 import Tweet from '../tweet/Tweet';
-import { TWEETCONTENT as tweetContent } from '../../constants/CONSTANTS';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
-
 
 const getTweetsQuery = gql`
     {
         tweets{
             content
             date
+            user {
+                username
+                displayName
+            }
+            likes {
+                user {
+                    username
+                }
+            }
+            retweets {
+                user {
+                    username
+                }
+            }
+            replies {
+                content
+            }
         }
     }
 `
 
-const List = (props) => {
-    const { loading, error, data } = useQuery(getTweetsQuery);
+const List = () => {
+    const { loading, error, data } = useQuery(getTweetsQuery); 
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error</p>;
 
     return (
         <div className="list">
-            {tweetContent.map((value, i) =>
+            {data.tweets.map((value, i) =>
                 <Tweet
                     key={i}
                     tweetContent={value}>

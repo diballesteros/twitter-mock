@@ -10,16 +10,15 @@ const Tweet = ({ tweetContent }) => (
         </div>
         <div className="tweet_content-container">
             <div className="tweet_user-container">
-                <label className="tweet_user_name">{tweetContent.user.name}</label>
-                <label className="tweet_user_tag">{tweetContent.user.tag} •</label>
-                <label className="tweet_user_tag">{tweetContent.time}</label>
+                <label className="tweet_user_name">{tweetContent.user.displayName}</label>
+                <label className="tweet_user_tag">{tweetContent.user.username} •</label>
+                <label className="tweet_user_tag">{tweetContent.date}</label>
             </div>
-            <span className="tweet_text">{tweetContent.text}</span>
-            <span className="tweet_image">{tweetContent.Image}</span>
+            <span className="tweet_text">{tweetContent.content}</span>
             <div className="tweet_interact-container">
-                <TweetExtension type="reply" count={tweetContent.replies} />
-                <TweetExtension type="retweet" count={tweetContent.retweets} />
-                <TweetExtension type="like" count={tweetContent.likes} />
+                <TweetExtension type="reply" count={tweetContent.replies.length} />
+                <TweetExtension type="retweet" count={tweetContent.retweets.length} />
+                <TweetExtension type="like" count={tweetContent.likes.length} />
             </div>
         </div>
     </div>
