@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Dashboard.css';
 import List from '../List/List';
 import Editor from '../Editor/Editor';
@@ -6,45 +6,46 @@ import Header from './Header/Header';
 import Center from './Center/Center';
 import RightSection from './RightSection/RightSection';
 import Home from '../Home/Home';
+import Tweet from '../Tweet/Tweet';
+import { CREATE_TWEET, GET_TWEETS } from '../../queries/queries';
+import { useQuery, useMutation } from '@apollo/react-hooks';
 
-class Dashboard extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            content: ''
-        }
-    }
+const Dashboard = () => {
+    const { loading, error, data } = useQuery(GET_TWEETS);
+    const [createTweet] = useMutation(CREATE_TWEET);
 
-    sendTweet() {
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error</p>;
 
-    }
-
-    render() {
-        return (
-            <div className="dashboard">
-                <Header />
-                <main className="banner">
-                    <div className="banner_container">
-                        <div className="banner_divider">
-                            <Center
-                                header={
-                                    <Home />
-                                }
-                                section={
-                                    <Editor sendTweet={() => this.sendTweet()}/>
-                                }
-                                body={
-                                    <List />
-                                }
-                            />
-                            <RightSection />
-                        </div>
+    return (
+        <div className="dashboard">
+            <Header />
+            <main className="banner">
+                <div className="banner_container">
+                    <div className="banner_divider">
+                        <Center
+                            header={
+                                <Home />
+                            }
+                            section={
+                                <Editor sendTweet={() => createTweet()} />
+                            }
+                            body={
+                                <List>
+                                    {data.tweets.map((value, i) =>
+                                        <Tweet
+                                            key={i}
+                                            tweetContent={value}>
+                                        </Tweet>)}
+                                </List>
+                            }
+                        />
+                        <RightSection />
                     </div>
-                </main>
-            </div>
-        );
-    };
-
+                </div>
+            </main>
+        </div>
+    );
 }
 
 export default Dashboard;

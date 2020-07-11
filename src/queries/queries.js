@@ -1,6 +1,6 @@
 import { gql } from 'apollo-boost';
 
-const getTweetsQuery = gql`
+const GET_TWEETS = gql`
     {
         tweets{
             content
@@ -26,4 +26,13 @@ const getTweetsQuery = gql`
     }
 `
 
-export { getTweetsQuery };
+const CREATE_TWEET = gql`
+    mutation {
+        createTweet(content:"", date:"", userId:"", replyTweetId:""){
+            content
+            date
+        }
+    }
+`
+
+export { GET_TWEETS, CREATE_TWEET };
