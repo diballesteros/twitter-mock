@@ -1,6 +1,6 @@
 import React from 'react'
 import './Modal.css';
-import Button from '../button/Button';
+import Button from '../Button/Button';
 
 const Modal = ({show, children}) => {
     const showModal = show ? 'modal display-block' : 'modal display-none';

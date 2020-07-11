@@ -1,5 +1,5 @@
 import React from 'react';
-import Icon from '../icon/Icon';
+import Icon from '../../common/Icon/Icon';
 import './Home.css';
 
 const Home = () => (

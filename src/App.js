@@ -1,7 +1,7 @@
 import React from 'react';
-import Dashboard from './components/dashboard/Dashboard';
-import Login from './components/login/Login';
-import Error from './components/error/Error'
+import Dashboard from './components/Dashboard/Dashboard';
+import Login from './components/Login/Login';
+import Error from './components/Error/Error'
 import { Switch, Route } from 'react-router-dom';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';

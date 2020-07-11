@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './Login.css';
-import Icon from '../icon/Icon';
-import Button from '../button/Button';
-import Input from '../input/Input';
-import Modal from '../modal/Modal';
-import SignUp from '../signup/SignUp';
+import Icon from '../../common/Icon/Icon';
+import Button from '../../common/Button/Button';
+import Input from '../../common/Input/Input';
+import Modal from '../../common/Modal/Modal';
+import SignUp from '../SignUp/SignUp';
 
 class Login extends Component {
     constructor(props) {

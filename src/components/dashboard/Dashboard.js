@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import './Dashboard.css';
-import List from '../list/List';
-import Editor from '../editor/Editor';
-import Header from './header/Header';
-import Center from '../center/Center';
-import RightSection from './rightSection/RightSection';
-import Home from '../home/Home';
+import List from '../List/List';
+import Editor from '../Editor/Editor';
+import Header from './Header/Header';
+import Center from './Center/Center';
+import RightSection from './RightSection/RightSection';
+import Home from '../Home/Home';
 
 class Dashboard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            content: ''
         }
+    }
+
+    sendTweet() {
+
     }
 
     render() {
@@ -27,7 +31,7 @@ class Dashboard extends Component {
                                     <Home />
                                 }
                                 section={
-                                    <Editor />
+                                    <Editor sendTweet={() => this.sendTweet()}/>
                                 }
                                 body={
                                     <List />

@@ -1,4 +1,4 @@
-.followContent {
+.followCard {
     position: relative;
     border-bottom-color: rgb(230, 236, 240);
     border-bottom-width: 1px;
@@ -10,16 +10,16 @@
     cursor: pointer;
 }
 
-.followContent:hover {
+.followCard:hover {
     background-color: rgba(0,0,0,0.03);
 }
 
-.followContent_container {
+.followCard_container {
     display: flex;
     flex-direction: row;
 }
 
-.followContent_image {
+.followCard_image {
     display: flex;
     flex-basis: 50px;
     min-width: 50px;
@@ -31,7 +31,7 @@
     position: relative;
 }
 
-.followContent_image img {
+.followCard_image img {
     height: 49px;
     width: 49px;
     background-size: cover;
@@ -39,7 +39,7 @@
     background-position: center center;
 }
 
-.followContent_details {
+.followCard_details {
     display: flex;
     justify-content: space-between;
     flex-basis: 0px;
@@ -49,7 +49,7 @@
     position: relative;
 }
 
-.followContent_user {
+.followCard_user {
     display: flex;
     flex-direction: column;
     outline-style: none;
@@ -59,20 +59,20 @@
     max-width: 100%;
 }
 
-.followContent_user-name {
+.followCard_user-name {
     color: rgb(20, 23, 26);
     font-weight: bold;
     font-size: 15px;
     text-decoration: none;
 }
 
-.followContent_user-tag {
+.followCard_user-tag {
     color: rgb(101, 119, 134);
     font-weight: 400;
     font-size: 15px;
 }
 
-.followContent_button {
+.followCard_button {
     width: 80px;
     margin-left: 10px;
     height: 30px;

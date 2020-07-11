@@ -1,34 +1,8 @@
 import React from 'react';
 import './List.css';
-import Tweet from '../tweet/Tweet';
-import { gql } from 'apollo-boost';
-import { useQuery } from '@apollo/react-hooks';
-
-const getTweetsQuery = gql`
-    {
-        tweets{
-            content
-            date
-            user {
-                username
-                displayName
-            }
-            likes {
-                user {
-                    username
-                }
-            }
-            retweets {
-                user {
-                    username
-                }
-            }
-            replies {
-                content
-            }
-        }
-    }
-`
+import Tweet from '../Tweet/Tweet';
+import { getTweetsQuery } from '../../queries/queries';
+import { useQuery } from '../../../node_modules/@apollo/react-hooks';
 
 const List = () => {
     const { loading, error, data } = useQuery(getTweetsQuery); 

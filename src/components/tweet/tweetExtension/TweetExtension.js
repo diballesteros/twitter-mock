@@ -1,6 +1,6 @@
 import React from 'react';
 import './TweetExtension.css';
-import Icon from '../../icon/Icon';
+import Icon from '../../../common/Icon/Icon';
 
 const TweetExtension = ({ type, count }) => (
     <div className={`tweet_extension ${type}`}>

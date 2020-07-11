@@ -1,4 +1,4 @@
-.happeningContent {
+.happeningCard {
     position: relative;
     border-bottom-color: rgb(230, 236, 240);
     border-bottom-width: 1px;
@@ -9,11 +9,11 @@
     cursor: pointer;
 }
 
-.happeningContent:hover {
+.happeningCard:hover {
     background-color: rgba(0,0,0,0.03);
 }
 
-.happeningContent a {
+.happeningCard a {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -26,7 +26,7 @@
     text-decoration: none;
 }
 
-.happeningContent .happeningContent_text-container {
+.happeningCard .happeningCard_text-container {
     margin-right: 10px;
     display: flex;
     flex-basis: 0%;
@@ -35,21 +35,21 @@
     flex-direction: column;
 }
 
-.happeningContent .happeningContent_text-container .happeningContent_category {
+.happeningCard .happeningCard_text-container .happeningCard_category {
     display: flex;
     align-items: center;
     flex-shrink: 1;
     flex-direction: row;
 }
 
-.happeningContent_category .happeningContent_trend-type {
+.happeningCard_category .happeningCard_trend-type {
     line-height: 20px;
     font-size: 13px;
     color: rgb(101, 119, 134);
     font-weight: 400;
 }
 
-.happeningContent_category .happeningContent_dot {
+.happeningCard_category .happeningCard_dot {
     color: rgb(101, 119, 134);
     font-weight: 400;
     flex-shrink: 0;
@@ -58,14 +58,14 @@
     padding-right: 5px;
 }
 
-.happeningContent_category .happeningContent_time-place {
+.happeningCard_category .happeningCard_time-place {
     line-height: 20px;
     font-size: 13px;
     color: rgb(101, 119, 134);
     font-weight: 400;
 }
 
-.happeningContent .happeningContent_text-container .happeningContent_main {
+.happeningCard .happeningCard_text-container .happeningCard_main {
     display: inline;
     color: rgb(20, 23, 26);
     font-weight: bold;
@@ -73,7 +73,7 @@
     margin: 2px 0 2px 0;
 }
 
-.happeningContent_picture-container {
+.happeningCard_picture-container {
     position: relative;
     height: 70px;
     width: 70px;
@@ -84,14 +84,14 @@
     border-top-right-radius: 14px;
 }
 
-.happeningContent_picture-container div {
+.happeningCard_picture-container div {
     display: flex;
     height: 100%;
     width: 100%;
     position: relative;
 }
 
-.happeningContent_picture-container img {
+.happeningCard_picture-container img {
     height: 100%;
     width: 100%;
     background-size: cover;

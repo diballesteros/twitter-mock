@@ -1,11 +1,7 @@
 import React from 'react';
 import './Grouper.css';
-import HappeningContent from './happeningContent/HappeningContent';
-import FollowContent from './followContent/FollowContent';
-import { HAPPENING as happening } from '../../constants/CONSTANTS';
-import { FOLLOW as follow } from '../../constants/CONSTANTS';
 
-const Grouper = ({ title, type }) => (
+const Grouper = ({  children, title }) => (
     <div className="grouper">
         <div className="grouper_header">
             <div className="grouper_header-inner">
@@ -16,17 +12,7 @@ const Grouper = ({ title, type }) => (
                 </h2>
             </div>
         </div>
-        {type === 'happening' ?
-            happening.map((value, i) =>
-                <HappeningContent
-                    key={i}
-                    grouperContent={value}>
-                </HappeningContent>) :
-            follow.map((value, i) =>
-                <FollowContent
-                    key={i}
-                    grouperContent={value}>
-                </FollowContent>)}
+        {children}
     </div>
 );
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Search.css';
-import Icon from '../icon/Icon';
+import Icon from '../Icon/Icon';
 
 const Search = (props) => (
     <div className="search-bar">

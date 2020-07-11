@@ -1,7 +1,7 @@
 import React from 'react'
 import './SignUp.css';
-import Icon from '../icon/Icon';
-import Input from '../input/Input';
+import Icon from '../../common/Icon/Icon';
+import Input from '../../common/Input/Input';
 
 const SignUp = () => (
     <div className="signup">
