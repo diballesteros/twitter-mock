@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Editor.module.scss';
 import Button from '../../common/Button/Button';
-import profilePicture from '../../assets/img/Profile_picture.jpg';
+import noprofile from '../../assets/svg/noprofile.svg';
 
 const Editor = ({content, createTweet}) => (
     <div className={styles.editor}>
         <div className={styles.profile}>
-            <img src={profilePicture} alt='profile' />
+            <img src={noprofile} alt='profile' />
         </div>
         <div className={styles.content}>
             <div className={styles.inputContainer}>

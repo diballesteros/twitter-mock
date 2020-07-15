@@ -1,18 +1,19 @@
 import React from 'react';
 import styles from './Tweet.module.scss';
 import TweetExtension from './TweetExtension/TweetExtension';
-import profilePicture from '../../assets/img/Profile_picture.jpg';
+import DateHelper from '../../helpers/DateHelper';
+import noprofile from '../../assets/svg/noprofile.svg';
 
 const Tweet = ({ tweetContent }) => (
     <div className={styles.tweet}>
         <div className={styles.profile}>
-            <img src={profilePicture} alt='profile' />
+            <img src={noprofile} alt='profile' />
         </div>
         <div className={styles.container}>
             <div className={styles.user}>
                 <label className={styles.username}>{tweetContent.user.displayName}</label>
                 <label className={styles.tag}>{tweetContent.user.username} •</label>
-                <label className={styles.tag}>{tweetContent.date}</label>
+                <label className={styles.tag}><DateHelper>{tweetContent.date}</DateHelper></label>
             </div>
             <span>{tweetContent.content}</span>
             <div className={styles.interact}>
