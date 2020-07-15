@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './HappeningCard.module.scss';
-import nascarPicture from '../../constants/img/NASCAR.jpg';
+import nascarPicture from '../../assets/img/NASCAR.jpg';
 
 const HappeningCard = ({ grouperContent }) => (
     <div className={styles.happeningCard}>

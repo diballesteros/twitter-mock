@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Tweet.module.scss';
-import profilePicture from '../../constants/img/Profile_picture.jpg';
 import TweetExtension from './TweetExtension/TweetExtension';
+import profilePicture from '../../assets/img/Profile_picture.jpg';
 
 const Tweet = ({ tweetContent }) => (
     <div className={styles.tweet}>

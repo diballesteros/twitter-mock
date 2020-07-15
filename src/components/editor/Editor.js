@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Editor.module.scss';
 import Button from '../../common/Button/Button';
-import profilePicture from '../../constants/img/Profile_picture.jpg';
+import profilePicture from '../../assets/img/Profile_picture.jpg';
 
 const Editor = ({content, createTweet}) => (
     <div className={styles.editor}>

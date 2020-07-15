@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './FollowCard.module.scss';
-import Nineteen from '../../constants/img/1975.jpg';
 import Button from '../../common/Button/Button';
+import Nineteen from '../../assets/img/1975.jpg';
 
 const FollowCard = ({grouperContent}) => (
     <div className={styles.followCard}>
