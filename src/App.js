@@ -13,13 +13,11 @@ const client = new ApolloClient({
 const App = () => {
   return (
     <ApolloProvider client={client}>
-      <div className="container-view">
         <Switch>
           <Route path='/' component={Login} exact />
           <Route path='/home' component={Dashboard} />
           <Route component={Error} />
         </Switch>
-      </div>
     </ApolloProvider>
   );
 }

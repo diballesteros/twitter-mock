@@ -1,12 +1,12 @@
 import React from 'react';
-import './Grouper.css';
+import styles from './Grouper.module.scss';
 
-const Grouper = ({  children, title }) => (
-    <div className="grouper">
-        <div className="grouper_header">
-            <div className="grouper_header-inner">
+const Grouper = ({ children, title }) => (
+    <div className={styles.grouper}>
+        <div className={styles.header}>
+            <div className={styles.inner}>
                 <h2>
-                    <div className="grouper_header-text">
+                    <div className={styles.text}>
                         <span>{title}</span>
                     </div>
                 </h2>

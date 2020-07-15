@@ -1,0 +1,84 @@
+.happeningCard {
+    position: relative;
+    border: none;
+    border-bottom: 1px solid rgb(230, 236, 240);
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0,0,0,0.03);
+    }
+
+    a {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        padding: 10px 15px;
+        outline-style: none;
+        cursor: pointer;
+        text-decoration: none;
+
+        .container {
+            margin-right: 10px;
+            display: flex;
+            flex-basis: 0%;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-direction: column;
+
+            .category {
+                display: flex;
+                align-items: center;
+                flex-shrink: 1;
+                flex-direction: row;
+
+                .trendType {
+                    line-height: 20px;
+                    font-size: 13px;
+                    color: rgb(101, 119, 134);
+                    font-weight: 400;
+                }
+
+                .dot {
+                    color: rgb(101, 119, 134);
+                    font-weight: 400;
+                    flex-shrink: 0;
+                    font-size: 15px;
+                    padding: 0 5px;
+                }
+
+                .timePlace {
+                    line-height: 20px;
+                    font-size: 13px;
+                    color: rgb(101, 119, 134);
+                    font-weight: 400;
+                }
+            }
+
+            .text {
+                display: inline;
+                color: rgb(20, 23, 26);
+                font-weight: bold;
+                font-size: 15px;
+                margin: 2px 0;
+            }
+        }
+
+        .picture {
+            position: relative;
+            height: 70px;
+            width: 70px;
+            background-color: rgb(204, 214, 221);
+            border-radius: 14px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                border-radius: 14px;
+            }
+            
+        }
+    }
+} 

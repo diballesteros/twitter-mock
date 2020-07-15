@@ -1,26 +1,26 @@
 import React from 'react';
-import './FollowCard.css';
+import styles from './FollowCard.module.scss';
 import Nineteen from '../../constants/img/1975.jpg';
 import Button from '../../common/Button/Button';
 
 const FollowCard = ({grouperContent}) => (
-    <div className="followCard">
-        <div className="followCard_container">
-            <div className="followCard_image">
+    <div className={styles.followCard}>
+        <div className={styles.container}>
+            <div className={styles.image}>
                 <img src={Nineteen} alt="1975"></img>
             </div> 
-            <div className="followCard_details">
-                <a href="/#" className="followCard_user">
-                    <div className="followCard_user-text">
-                        <div className="followCard_user-name">
+            <div className={styles.details}>
+                <a href="/#" className={styles.user}>
+                    <div className={styles.text}>
+                        <div className={styles.username}>
                             <span>{grouperContent.user.name}</span>
                         </div>
-                        <div className="followCard_user-tag">
+                        <div className={styles.tag}>
                             <span>{grouperContent.user.tag}</span>
                         </div>
                     </div>
                 </a>
-                <div className="followCard_button">
+                <div className={styles.button}>
                     <Button>Follow</Button>
                 </div>
             </div>

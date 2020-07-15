@@ -1,0 +1,31 @@
+.center {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    width: 617px;
+    max-width: 617px;
+    border-left: 1px rgb(230, 236, 240) solid;
+    border-right: 1px rgb(230, 236, 240) solid;
+
+    .title {
+        display: flex;
+        align-items: center;
+        height: 53px;
+        border-bottom: 1px rgb(230, 236, 240) solid;
+    }
+
+    .section {
+        height: 118px;
+        border-bottom: 1px rgb(230, 236, 240) solid;
+    }    
+
+    .separator {
+        height: 10px;
+        background-color: rgb(230, 236, 240);
+    }
+    
+}
+
+
+
+

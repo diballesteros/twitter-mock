@@ -1,27 +1,27 @@
 import React from 'react';
-import './HappeningCard.css';
+import styles from './HappeningCard.module.scss';
 import nascarPicture from '../../constants/img/NASCAR.jpg';
 
 const HappeningCard = ({ grouperContent }) => (
-    <div className="happeningCard">
+    <div className={styles.happeningCard}>
         <a href="/#">
-            <div className="happeningCard_text-container">
-                <div className="happeningCard_category">
-                    <div className="happeningCard_trend-type">
+            <div className={styles.container}>
+                <div className={styles.category}>
+                    <div className={styles.trendType}>
                         <span>{grouperContent.user}</span>
                     </div>
-                    <div className="happeningCard_dot">
+                    <div className={styles.dot}>
                         <span>•</span>
                     </div>
-                    <div className="happeningCard_time-place">
+                    <div className={styles.timePlace}>
                         <span>{grouperContent.time}</span>
                     </div>
                 </div>
-                <div className="happeningCard_main">
+                <div className={styles.text}>
                     <span>{grouperContent.text}</span>
                 </div>
             </div>
-            <div className="happeningCard_picture-container">
+            <div className={styles.picture}>
                 <img src={nascarPicture} alt='trendingpicture'></img>
             </div>
         </a>

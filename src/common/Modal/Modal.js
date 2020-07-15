@@ -1,15 +1,15 @@
 import React from 'react'
-import './Modal.css';
+import styles from './Modal.module.scss';
 import Button from '../Button/Button';
 
 const Modal = ({show, children}) => {
-    const showModal = show ? 'modal display-block' : 'modal display-none';
+    const showModal = show ? styles.displayBlock : styles.displayNone;
 
     return (
-        <div className={showModal}>
-            <section className="modal_container">
+        <div className={`${styles.modal} ${showModal}`}>
+            <section className={styles.container}>
                 {children}
-                <div className="modal_close">
+                <div className={styles.close}>
                     <Button>Close</Button>
                 </div>
             </section>

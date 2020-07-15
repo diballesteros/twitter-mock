@@ -1,0 +1,76 @@
+.editor {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    width: 100%;
+
+    .profile {
+        flex-basis: 50px;
+        min-width: 50px;
+        height: 50px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 10px 5px 0px 5px;
+
+        img {
+            height: 49px;
+            width: 49px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+
+    
+    .content {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        flex-grow: 1;
+        width: 100%;
+        margin: 0 5px;
+        padding: 0 15px 10px 15px;
+
+        .inputContainer {
+            display: flex;
+            align-items: center;
+            height: 59px;
+
+            &::placeholder{
+                color: #9197a3;
+            }
+
+            input {
+                flex-basis: auto;
+                border: 0px none;
+                font-size: 19px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: flex-end;
+            height: 49px;
+
+            > div {
+                width: 74px;
+                height: 39px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

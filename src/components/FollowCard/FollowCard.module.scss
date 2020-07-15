@@ -1,0 +1,77 @@
+.followCard {
+    position: relative;
+    border: none;
+    border-bottom: 1px solid rgb(230, 236, 240);
+    padding: 15px 10px 15px 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(0,0,0,0.03);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+
+        .image {
+            display: flex;
+            flex-basis: 50px;
+            min-width: 50px;
+            height: 50px;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 10px;
+            flex-grow: 0;
+            position: relative;
+
+            img {
+                height: 49px;
+                width: 49px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 0px;
+            flex-grow: 1;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+
+            .user {
+                display: flex;
+                flex-direction: column;
+                outline-style: none;
+                text-decoration: none;
+                cursor: pointer;
+                flex-shrink: 1;
+                max-width: 100%;
+
+                .username {
+                    color: rgb(20, 23, 26);
+                    font-weight: bold;
+                    font-size: 15px;
+                    text-decoration: none;
+                }
+
+                .tag {
+                    color: rgb(101, 119, 134);
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+                
+            }
+
+            .button {
+                width: 80px;
+                height: 30px;
+                margin-left: 10px;
+            }            
+        }
+        
+    }
+}

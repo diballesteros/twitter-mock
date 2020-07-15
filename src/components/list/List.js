@@ -1,15 +1,13 @@
 import React from 'react';
-import './List.css';
+import styles from './List.module.scss';
 
 const List = ({children}) => {
 
     return (
-        <div className="list">
+        <div className={styles.list}>
             {children}
         </div>
     );
 };
-
-
 
 export default List;

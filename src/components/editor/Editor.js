@@ -1,20 +1,20 @@
 import React from 'react';
-import './Editor.css';
+import styles from './Editor.module.scss';
 import Button from '../../common/Button/Button';
 import profilePicture from '../../constants/img/Profile_picture.jpg';
 
-const Editor = ({content, sendTweet}) => (
-    <div className="editor">
-        <div className="editor_profile-picture">
+const Editor = ({content, createTweet}) => (
+    <div className={styles.editor}>
+        <div className={styles.profile}>
             <img src={profilePicture} alt='profile' />
         </div>
-        <div className="editor_content-container">
-            <div className="editor_input-container">
+        <div className={styles.content}>
+            <div className={styles.inputContainer}>
                 <input type="text" placeholder="What's happening?" value={content}/>
             </div>
-            <div className="editor_buttons-container">
+            <div className={styles.button}>
                 <div>
-                    <Button onClick={(content) => sendTweet(content)}>Tweet</Button>
+                    <Button clicked={(content) => createTweet(content)}>Tweet</Button>
                 </div>
             </div>
         </div>

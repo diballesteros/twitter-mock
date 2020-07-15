@@ -1,5 +1,5 @@
 import React from 'react';
-import './Dashboard.css';
+import styles from './Dashboard.module.scss';
 import List from '../List/List';
 import Editor from '../Editor/Editor';
 import Header from './Header/Header';
@@ -18,17 +18,27 @@ const Dashboard = () => {
     if (error) return <p>Error</p>;
 
     return (
-        <div className="dashboard">
+        <div className={styles.dashboard}>
             <Header />
-            <main className="banner">
-                <div className="banner_container">
-                    <div className="banner_divider">
+            <main className={styles.banner}>
+                <div className={styles.container}>
+                    <div className={styles.divider}>
                         <Center
                             header={
                                 <Home />
                             }
                             section={
-                                <Editor sendTweet={() => createTweet()} />
+                                <Editor createTweet={(content) => {
+                                    console.log(content);
+                                    createTweet({
+                                        variables: {
+                                            content: content,
+                                            date: 'test',
+                                            userId: '5f0659c70f8d332174afaf38'
+                                        }
+                                    })
+                                }
+                                } />
                             }
                             body={
                                 <List>

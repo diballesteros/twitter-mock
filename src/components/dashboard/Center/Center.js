@@ -1,15 +1,15 @@
 import React from 'react';
-import './Center.css';
+import styles from './Center.module.scss';
 
 const Center = ({ header, section, body }) => (
-    <div className="center">
-        <div className="center_title">
+    <div className={styles.center}>
+        <div className={styles.title}>
             {header}
         </div>
-        <div className="center_section">
+        <div className={styles.section}>
             {section}
         </div>
-        <div className="center_separator"></div>
+        <div className={styles.separator}></div>
         {body}
     </div>
 );

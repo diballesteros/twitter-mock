@@ -1,0 +1,70 @@
+.tweet {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    width: 100%;
+    border-bottom: 1px solid rgb(230, 236, 240);
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(245, 248, 250);
+    }
+
+    .profile {
+        flex-basis: 50px;
+        min-width: 50px;
+        height: 50px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 10px 5px 0px 5px;
+
+        img {
+            height: 49px;
+            width: 49px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        
+    }
+
+    .container {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+        margin: 0 5px;
+        padding: 10px 0px;
+
+        .user {
+            display: flex;
+            flex-flow: row nowrap;
+
+            .username {
+                color: rgb(20, 23, 26);
+                font-size: 15px;
+                font-weight: bold;
+                cursor: pointer;
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+    
+            .tag {
+                color: rgb(101, 119, 134);
+                font-weight: 400;
+                font-size: 14px;
+                margin-left: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .interact {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            max-width: 425px;
+            margin-top: 10px;
+        }
+    }
+}

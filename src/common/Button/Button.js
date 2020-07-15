@@ -1,8 +1,8 @@
 import React from 'react';
-import './Button.css';
+import styles from'./Button.module.scss';
 
-const Button = ({children}) => (
-    <div className="button_container">
+const Button = ({children, clicked}) => (
+    <div className={styles.container} onClick={clicked}>
         <span>{children}</span>
     </div>
 );

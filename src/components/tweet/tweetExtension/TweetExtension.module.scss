@@ -1,0 +1,45 @@
+.extension {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    .icon {
+        display: flex;
+        margin-right: 10px;
+    }
+
+    span {
+        color: rgb(101, 119, 134);
+    }
+
+    &.reply:hover span {
+        color: rgb(29, 161, 242);
+    }
+
+    &.reply:hover path {
+        fill: rgb(29, 161, 242);
+    }
+
+    &.retweet:hover span {
+        color: rgb(23, 191, 99);
+    }
+
+    &.retweet:hover path {
+        fill: rgb(23, 191, 99);
+    }
+
+    &.like:hover span {
+        color: rgb(226, 36, 94);
+    }
+
+    &.like:hover path {
+        fill: rgb(226, 36, 94);
+    }
+}
+
+
+
+
+
+
+

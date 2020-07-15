@@ -1,13 +1,13 @@
 import React from 'react';
-import './Search.css';
+import styles from './Search.module.scss';
 import Icon from '../Icon/Icon';
 
-const Search = (props) => (
-    <div className="search-bar">
-        <div className="search-bar_icon">
+const Search = () => (
+    <div className={styles.searchBar}>
+        <div className={styles.icon}>
             <Icon group="SEARCH" icon="loop" width="20" height="20"/>
         </div>
-        <div className="search-bar_input">
+        <div>
             <input placeholder="Search Pandi"/>
         </div>
     </div>

@@ -1,11 +1,11 @@
 import React from 'react';
-import './Input.css';
+import styles from './Input.module.scss';
 
 const Input = ({type, children}) => (
-    <label className="input">
-        <div className="input_container">
-            <div className="input_text">{children}</div>
-            <div className="input_value">
+    <label className={styles.input}>
+        <div className={styles.container}>
+            <div className={styles.text}>{children}</div>
+            <div className={styles.value}>
                 <input type={type === 'password' ? type : 'text'} id={`${type}_login`}/>
             </div>
         </div>
