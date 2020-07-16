@@ -27,10 +27,9 @@ const GET_TWEETS = gql`
 `
 
 const CREATE_TWEET = gql`
-    mutation CreateTweet($content: String!, $date: String!, $userId: ID!) {
-        createTweet(content: $content, date: $date, userId: $userId, replyTweetId:""){
+    mutation CreateTweet($content: String!) {
+        createTweet(content: $content){
             content
-            date
         }
     }
 `

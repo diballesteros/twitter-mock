@@ -17,6 +17,14 @@ const Dashboard = () => {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error</p>;
 
+    const handleTweet = (content) => {
+        createTweet({
+            variables: {
+                content: content
+            }
+        });
+    };
+
     return (
         <div className={styles.dashboard}>
             <Header />
@@ -28,17 +36,7 @@ const Dashboard = () => {
                                 <Home />
                             }
                             section={
-                                <Editor createTweet={(content) => {
-                                    console.log(content);
-                                    createTweet({
-                                        variables: {
-                                            content: content,
-                                            date: 'test',
-                                            userId: '5f0659c70f8d332174afaf38'
-                                        }
-                                    })
-                                }
-                                } />
+                                <Editor handleTweet={(content) => handleTweet(content)}/>
                             }
                             body={
                                 <List>
