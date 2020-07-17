@@ -21,7 +21,8 @@ const Dashboard = () => {
         createTweet({
             variables: {
                 content: content
-            }
+            },
+            refetchQueries: [{query: GET_TWEETS}]
         });
     };
 
