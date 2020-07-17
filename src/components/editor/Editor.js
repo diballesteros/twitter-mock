@@ -17,7 +17,7 @@ const Editor = ({ handleTweet }) => {
                 </form>
                 <div className={styles.button}>
                     <div>
-                        <Button clicked={() => handleTweet(content)}>Tweet</Button>
+                        <Button clicked={() => handleTweet(content)} disabled={content === ''}>Tweet</Button>
                     </div>
                 </div>
             </div>

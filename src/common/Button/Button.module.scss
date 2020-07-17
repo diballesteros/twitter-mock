@@ -17,6 +17,17 @@
     &:hover {
         background-color: rgb(26, 145, 218);
     }
+
+    &.disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    &.disabled:hover {
+        background-color: rgb(29, 161, 242);
+    }
 }
+
+
 
 
