@@ -4,9 +4,9 @@ import styles from './Input.module.scss';
 const Input = ({type, children}) => (
     <label className={styles.input}>
         <div className={styles.container}>
-            <div className={styles.text}>{children}</div>
+            <label htmlFor={children} className={styles.text}>{children}</label>
             <div className={styles.value}>
-                <input type={type === 'password' ? type : 'text'} id={`${type}_login`}/>
+                <input type={type} id={children} />
             </div>
         </div>
     </label>

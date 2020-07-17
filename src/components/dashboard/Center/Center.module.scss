@@ -1,7 +1,7 @@
 .center {
     display: flex;
     flex-flow: column nowrap;
-    height: 100%;
+    height: fit-content;
     width: 617px;
     max-width: 617px;
     border-left: 1px rgb(230, 236, 240) solid;
@@ -15,7 +15,7 @@
     }
 
     .section {
-        height: 118px;
+        min-height: 118px;
         border-bottom: 1px rgb(230, 236, 240) solid;
     }    
 

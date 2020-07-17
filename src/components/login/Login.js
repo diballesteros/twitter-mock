@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Login.module.scss';
 import Icon from '../../common/Icon/Icon';
 import Button from '../../common/Button/Button';
@@ -7,6 +7,7 @@ import Modal from '../../common/Modal/Modal';
 import SignUp from '../SignUp/SignUp';
 
 const Login = () => {
+    const [showSignUp, setShowSignup] = useState(false);
 
     return (
         <main className={styles.login}>
@@ -15,7 +16,7 @@ const Login = () => {
                 <h1>Log in to Pandi</h1>
                 <form className={styles.form}>
                     <div className={styles.field}>
-                        <Input type="username">Username</Input>
+                        <Input type="text">Username</Input>
                     </div>
                     <div className={styles.field}>
                         <Input type="password">Password</Input>
@@ -24,11 +25,11 @@ const Login = () => {
                         <Button>Log in</Button>
                     </div>
                     <div className={`${styles.button} ${styles.field}`}>
-                        <Button>Sign up</Button>
+                        <Button clicked={() => setShowSignup(!showSignUp)}>Sign up</Button>
                     </div>
                 </form>
             </div>
-            <Modal show={false}>
+            <Modal show={true} handleClose={() => setShowSignup(!showSignUp)}>
                 <SignUp />
             </Modal>
         </main>

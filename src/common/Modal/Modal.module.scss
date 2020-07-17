@@ -19,13 +19,19 @@
         max-height: 90vh;
         background-color: rgba(255,255,255,1.00);
 
-        .close {
+        .header {
             display: flex;
-            height: 30px;
-            width: 50px;
-            margin-left: auto;
-            margin-right: 30px;
-        }        
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10px 0 10px;
+
+            .close {
+                display: flex;
+                height: 30px;
+                width: 50px;
+            }  
+        }
     }
     
 }
