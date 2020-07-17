@@ -4,7 +4,7 @@ const convertDate = (date) => {
     const dateDifference = Date.now() - date;
 
     if (dateDifference > 86400000) {
-        return '';
+        return (new Date(Number(date))).toLocaleString('default', {month: 'long', day: 'numeric'});
     }
     if (dateDifference > 3600000) {
         return (dateDifference / (1000 * 60 * 60)).toFixed() + 'h';
