@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Dashboard.module.scss';
 import List from '../List/List';
 import Editor from '../Editor/Editor';
@@ -12,17 +12,18 @@ import { CREATE_TWEET, GET_TWEETS } from '../../queries/queries';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 
 const Dashboard = () => {
+    const [content, setContent] = useState('');
     const { loading, error, data } = useQuery(GET_TWEETS);
     const [createTweet] = useMutation(CREATE_TWEET);
 
     if (error) return <p>Error</p>;
 
-    const handleTweet = (content) => {
+    const sendTweet = (tweet) => {
         createTweet({
             variables: {
-                content: content
+                content: tweet
             },
-            refetchQueries: [{query: GET_TWEETS}]
+            refetchQueries: [{ query: GET_TWEETS }]
         });
     };
 
@@ -37,17 +38,17 @@ const Dashboard = () => {
                                 <Home />
                             }
                             section={
-                                <Editor handleTweet={(content) => handleTweet(content)}/>
+                                <Editor sendTweet={(tweet) => sendTweet(tweet)} handleChange={(content) => setContent(content)} content={content} />
                             }
                             body={
                                 <List>
-                                    {loading ? 
-                                    <Loader loading={loading} /> : 
-                                    data.tweets.map((value, i) =>
-                                        <Tweet
-                                            key={i}
-                                            tweetContent={value}>
-                                        </Tweet>)}
+                                    {loading ?
+                                        <Loader loading={loading} /> :
+                                        data.tweets.map((value, i) =>
+                                            <Tweet
+                                                key={i}
+                                                tweetContent={value}>
+                                            </Tweet>)}
                                 </List>
                             }
                         />
