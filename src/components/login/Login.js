@@ -8,6 +8,14 @@ import SignUp from '../SignUp/SignUp';
 
 const Login = () => {
     const [showSignUp, setShowSignup] = useState(false);
+    const [newUser, setNewUser] = useState({ name: '', username: '', password: '' })
+
+    const updateNewUser = (value, reference) => {
+        setNewUser({
+            ...newUser,
+            [reference]: value
+        });
+    }
 
     return (
         <main className={styles.login}>
@@ -16,10 +24,10 @@ const Login = () => {
                 <h1>Log in to Pandi</h1>
                 <form className={styles.form}>
                     <div className={styles.field}>
-                        <Input type="text">Username</Input>
+                        <Input type="text" maxlength={20}>Username</Input>
                     </div>
                     <div className={styles.field}>
-                        <Input type="password">Password</Input>
+                        <Input type="password" maxlength={20}>Password</Input>
                     </div>
                     <div className={`${styles.button} ${styles.field}`}>
                         <Button>Log in</Button>
@@ -29,8 +37,8 @@ const Login = () => {
                     </div>
                 </form>
             </div>
-            <Modal show={true} handleClose={() => setShowSignup(!showSignUp)}>
-                <SignUp />
+            <Modal show={showSignUp} handleClose={() => setShowSignup(!showSignUp)}>
+                <SignUp newUser={newUser} handleNewUser={(newUser, reference) => updateNewUser(newUser, reference)} />
             </Modal>
         </main>
     );

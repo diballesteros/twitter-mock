@@ -40,6 +40,14 @@
                 margin-top: 20px;
                 height: 50px;
             }
+
+            .nameCount {
+                display: flex;
+                justify-content: flex-end;
+                color: rgb(136, 153, 166);
+                font-weight: 400;
+                font-size: 15px;
+            }
         }
     }
 }
