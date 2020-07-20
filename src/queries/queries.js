@@ -1,5 +1,14 @@
 import { gql } from 'apollo-boost';
 
+const LOGIN = gql`
+    query Login($username: String!, $password: String!) {
+            login(username: $username, password: $password) {
+                token
+                tokenExpiration
+            }
+        }
+`;
+
 const GET_TWEETS = gql`
     {
         tweets{
@@ -24,7 +33,7 @@ const GET_TWEETS = gql`
             }
         }
     }
-`
+`;
 
 const CREATE_TWEET = gql`
     mutation CreateTweet($content: String!) {
@@ -32,6 +41,6 @@ const CREATE_TWEET = gql`
             content
         }
     }
-`
+`;
 
-export { GET_TWEETS, CREATE_TWEET };
+export { LOGIN, GET_TWEETS, CREATE_TWEET };

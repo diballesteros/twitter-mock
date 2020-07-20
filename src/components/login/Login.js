@@ -5,16 +5,31 @@ import Button from '../../common/Button/Button';
 import Input from '../../common/Input/Input';
 import Modal from '../../common/Modal/Modal';
 import SignUp from '../SignUp/SignUp';
+import { LOGIN } from '../../queries/queries';
+import { useLazyQuery } from '@apollo/react-hooks';
 
 const Login = () => {
     const [showSignUp, setShowSignup] = useState(false);
-    const [newUser, setNewUser] = useState({ name: '', username: '', password: '' })
+    const [loginUser, setLoginUser] = useState({ username: '', password: '' });
+    const [newUser, setNewUser] = useState({ name: '', username: '', password: '' });
+    const [sendLogin, { loading, data }] = useLazyQuery(LOGIN);
 
     const updateNewUser = (value, reference) => {
         setNewUser({
             ...newUser,
             [reference]: value
         });
+    }
+
+    const updateLoginUser = (value, reference) => {
+        setLoginUser({
+            ...loginUser,
+            [reference]: value
+        });
+    }
+
+    const loginHandler = () => {
+        console.log(loginUser.username, loginUser.password);
     }
 
     return (
@@ -24,13 +39,19 @@ const Login = () => {
                 <h1>Log in to Pandi</h1>
                 <form className={styles.form}>
                     <div className={styles.field}>
-                        <Input type="text" maxlength={20}>Username</Input>
+                        <Input type="text"
+                            value={loginUser.username}
+                            handleChange={(loginUser) => updateLoginUser(loginUser, 'username')}
+                            maxlength={20}>Username</Input>
                     </div>
                     <div className={styles.field}>
-                        <Input type="password" maxlength={20}>Password</Input>
+                        <Input type="password"
+                            value={loginUser.password}
+                            handleChange={(loginPassword) => updateLoginUser(loginPassword, 'password')}
+                            maxlength={20}>Password</Input>
                     </div>
                     <div className={`${styles.button} ${styles.field}`}>
-                        <Button>Log in</Button>
+                        <Button clicked={() => loginHandler()} disabled={loginUser.password.trim().length === 0 || loginUser.username.trim().length === 0}>Log in</Button>
                     </div>
                     <div className={`${styles.button} ${styles.field}`}>
                         <Button clicked={() => setShowSignup(!showSignUp)}>Sign up</Button>
