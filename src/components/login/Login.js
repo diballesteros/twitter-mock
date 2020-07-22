@@ -5,6 +5,7 @@ import Button from '../../common/Button/Button';
 import Input from '../../common/Input/Input';
 import Modal from '../../common/Modal/Modal';
 import SignUp from '../SignUp/SignUp';
+import Loader from '../../common/Loader/Loader';
 import { LOGIN } from '../../queries/queries';
 import { useLazyQuery } from '@apollo/react-hooks';
 
@@ -12,7 +13,7 @@ const Login = () => {
     const [showSignUp, setShowSignup] = useState(false);
     const [loginUser, setLoginUser] = useState({ username: '', password: '' });
     const [newUser, setNewUser] = useState({ name: '', username: '', password: '' });
-    const [sendLogin, { loading, data }] = useLazyQuery(LOGIN);
+    const [tryLogin, { loading, data, error }] = useLazyQuery(LOGIN);
 
     const updateNewUser = (value, reference) => {
         setNewUser({
@@ -28,8 +29,10 @@ const Login = () => {
         });
     }
 
-    const loginHandler = () => {
-        console.log(loginUser.username, loginUser.password);
+    if (loading) return <Loader loading={loading}></Loader>;
+
+    if (data) {
+        console.log('test');
     }
 
     return (
@@ -51,7 +54,9 @@ const Login = () => {
                             maxlength={20}>Password</Input>
                     </div>
                     <div className={`${styles.button} ${styles.field}`}>
-                        <Button clicked={() => loginHandler()} disabled={loginUser.password.trim().length === 0 || loginUser.username.trim().length === 0}>Log in</Button>
+                        <Button clicked={() => tryLogin({ variables: { username: loginUser.username, password: loginUser.password } })}
+                            disabled={loginUser.password.trim().length === 0 || loginUser.username.trim().length === 0}>
+                            Log in</Button>
                     </div>
                     <div className={`${styles.button} ${styles.field}`}>
                         <Button clicked={() => setShowSignup(!showSignUp)}>Sign up</Button>
