@@ -40,6 +40,14 @@ const Login = () => {
             <div className={styles.container}>
                 <Icon group="GENERAL" icon="dog" width="45" height="28" color="#1da1f2" />
                 <h1>Log in to Pandi</h1>
+                {
+                    error ? 
+                    <div>
+                        <span className={styles.error}>
+                        The username and password you entered did not match our records. Please double-check and try again.
+                        </span>
+                    </div> : null
+                }
                 <form className={styles.form}>
                     <div className={styles.field}>
                         <Input type="text"
