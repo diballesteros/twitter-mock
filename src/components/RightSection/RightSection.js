@@ -1,12 +1,11 @@
 import React from 'react';
 import styles from './RightSection.module.scss';
-import Search from '../../../common/Search/Search';
-import Grouper from '../../Grouper/Grouper';
-import HappeningContent from '../../HappeningCard/HappeningCard';
-import FollowCard from '../../FollowCard/FollowCard';
-import { HAPPENING as happening } from '../../../constants/CONSTANTS';
-import { FOLLOW as follow } from '../../../constants/CONSTANTS';
-
+import Search from '../../common/Search/Search';
+import Grouper from '../Grouper/Grouper';
+import HappeningContent from '../HappeningCard/HappeningCard';
+import FollowCard from '../FollowCard/FollowCard';
+import { HAPPENING as happening } from '../../constants/CONSTANTS';
+import { FOLLOW as follow } from '../../constants/CONSTANTS';
 
 const RightSection = () => (
     <div className={styles.rightSection}>

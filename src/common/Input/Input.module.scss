@@ -6,10 +6,6 @@
     border-bottom: 2px solid rgb(101, 119, 134);
     border-radius: 2px;
 
-    &:focus-within {
-        border-bottom-color: #1da1f2;
-    }
-
     .container {
         display: flex;
         flex-shrink: 1;
@@ -48,8 +44,20 @@
         }
     }
 
+    &:focus-within {
+        border-bottom-color: #1da1f2;
+    }
+
     &:focus-within .text {
         color: #1da1f2;
+    }
+
+    &.error:focus-within {
+
+    }
+
+    &.error:focus-within .text {
+        
     }
 }
 

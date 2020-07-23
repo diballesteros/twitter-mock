@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '../../../common/Button/Button';
-import Icon from '../../../common/Icon/Icon';
-import Option from '../../Option/Option';
+import Button from '../../common/Button/Button';
+import Icon from '../../common/Icon/Icon';
+import Option from '../Option/Option';
 import styles from './Header.module.scss';
 
 const Header = () => (

@@ -1,5 +1,5 @@
 .rightSection {
-    composes: scrollbar from '../../../scss/Common.module.scss';
+    composes: scrollbar from '../../scss/Common.module.scss';
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;

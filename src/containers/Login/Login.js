@@ -1,29 +1,34 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useContext, useEffect } from 'react';
 import styles from './Login.module.scss';
 import Icon from '../../common/Icon/Icon';
 import Button from '../../common/Button/Button';
 import Input from '../../common/Input/Input';
 import Modal from '../../common/Modal/Modal';
-import SignUp from '../SignUp/SignUp';
+import SignUp from '../../components/SignUp/SignUp';
 import Loader from '../../common/Loader/Loader';
+import AuthContext from '../../context/AuthContext';
 import { LOGIN } from '../../queries/queries';
 import { useLazyQuery } from '@apollo/react-hooks';
 
 const Login = () => {
+    const auth = useContext(AuthContext);
     const [showSignUp, setShowSignup] = useState(false);
     const loginUser = useRef('');
     const loginPassword = useRef('');
     const [tryLogin, { loading, data, error }] = useLazyQuery(LOGIN);
+
+    useEffect(() => {
+        if (data) {
+            auth.login(data.login.token, data.login.user, data.login.tokenExpiration);
+        }
+        return;
+    }, [data, auth]);
 
     const createNewUser = (newName, newUsername, newPassword) => {
         console.log('create user test');
     }
 
     if (loading) return <Loader loading={loading}></Loader>;
-
-    if (data) {
-        console.log('test');
-    }
 
     return (
         <main className={styles.login}>

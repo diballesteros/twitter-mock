@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import styles from './Dashboard.module.scss';
-import List from '../List/List';
-import Editor from '../Editor/Editor';
-import Header from './Header/Header';
-import Center from './Center/Center';
-import RightSection from './RightSection/RightSection';
-import Home from '../Home/Home';
-import Tweet from '../Tweet/Tweet';
-import Loader from '../../common/Loader/Loader';
+import List from '../../components/List/List';
+import Editor from '../../components/Editor/Editor';
+import Header from '../../components/Header/Header';
+import Center from '../../components/Center/Center';
+import RightSection from '../../components/RightSection/RightSection';
+import Home from '../../components/Home/Home';
+import Tweet from '../../components/Tweet/Tweet';
+import ApolloWrapper from '../../helpers/ApolloWrapper';
 import { CREATE_TWEET, GET_TWEETS } from '../../queries/queries';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 
@@ -15,8 +15,6 @@ const Dashboard = () => {
     const [content, setContent] = useState('');
     const { loading, error, data } = useQuery(GET_TWEETS);
     const [createTweet] = useMutation(CREATE_TWEET);
-
-    if (error) return <p>Error</p>;
 
     const sendTweet = (tweet) => {
         createTweet({
@@ -42,13 +40,13 @@ const Dashboard = () => {
                             }
                             body={
                                 <List>
-                                    {loading ?
-                                        <Loader loading={loading} /> :
-                                        data.tweets.map((value, i) =>
-                                            <Tweet
-                                                key={i}
-                                                tweetContent={value}>
-                                            </Tweet>)}
+                                    <ApolloWrapper loading={loading} error={error} data ={data}>
+                                        {data ? data.tweets.map((value, i) =>
+                                                <Tweet
+                                                    key={i}
+                                                    tweetContent={value}>
+                                                </Tweet>) : null}
+                                    </ApolloWrapper>
                                 </List>
                             }
                         />
