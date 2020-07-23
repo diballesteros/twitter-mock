@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './RightSection.module.scss';
-import Search from '../Search/Search';
-import Grouper from '../Grouper/Grouper';
-import HappeningContent from '../HappeningCard/HappeningCard';
-import FollowCard from '../FollowCard/FollowCard';
+import Search from '../../components/Search/Search';
+import Grouper from '../../components/Grouper/Grouper';
+import HappeningContent from '../../components/HappeningCard/HappeningCard';
+import FollowCard from '../../components/FollowCard/FollowCard';
 import { HAPPENING as happening } from '../../constants/CONSTANTS';
 import { FOLLOW as follow } from '../../constants/CONSTANTS';
 

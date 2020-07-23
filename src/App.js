@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Dashboard from './containers/Dashboard/Dashboard';
 import Login from './containers/Login/Login';
-import Error from './components/Error/Error'
+import Error from './containers/Error/Error'
 import AuthContext from './context/AuthContext';
 import { Switch, Route } from 'react-router-dom';
 import ApolloClient from 'apollo-boost';
