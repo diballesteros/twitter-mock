@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './RightSection.module.scss';
-import Search from '../../common/Search/Search';
+import Search from '../Search/Search';
 import Grouper from '../Grouper/Grouper';
 import HappeningContent from '../HappeningCard/HappeningCard';
 import FollowCard from '../FollowCard/FollowCard';
