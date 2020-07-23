@@ -4,7 +4,7 @@ import Input from '../../common/Input/Input';
 import Button from '../../common/Button/Button';
 
 const SignUp = ({ createNewUser }) => {
-    const newName = useRef('');
+    const [newName, setNewName] = useState('');
     const newUsername = useRef('');
     const newPassword = useRef('');
 
@@ -17,10 +17,10 @@ const SignUp = ({ createNewUser }) => {
                     </div>
                     <div>
                         <div className={styles.field}>
-                            <Input type="text" forwardedRef={newName} maxlength={50}>Name</Input>
+                            <Input type="text" value={newName} handleChange={(value) => setNewName(value)} maxlength={50}>Name</Input>
                         </div>
                         <div className={styles.nameCount}>
-                            <span>{` / 50`}</span>
+                            <span>{`${newName.length} / 50`}</span>
                         </div>
                     </div>
                     <div className={styles.field}>
@@ -30,7 +30,7 @@ const SignUp = ({ createNewUser }) => {
                         <Input type="password" forwardedRef={newPassword} maxlength={20}>Password</Input>
                     </div>
                     <div className={styles.button}>
-                        <Button clicked={() => createNewUser(newName.current.value, newUsername.current.value, newPassword.current.value)}>Sign Up</Button>
+                        <Button clicked={() => createNewUser(newName, newUsername.current.value, newPassword.current.value)}>Sign Up</Button>
                     </div>
                 </div>
             </div>
