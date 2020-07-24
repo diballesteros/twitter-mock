@@ -1,36 +1,33 @@
 .searchBar {
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 1;
-    flex-grow: 1;
-    background-color: rgb(230, 236, 240);
-    border-radius : 9999px;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0);
-    border-style: solid;
+	display: flex;
+	flex-direction: row;
+	flex-shrink: 1;
+	flex-grow: 1;
+	background-color: rgb(230, 236, 240);
+	border-radius: 9999px;
+	border-width: 1px;
+	border-color: rgba(0, 0, 0, 0);
+	border-style: solid;
 
-    .icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+	.icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-        svg {
-            padding-left: 10px;
-        }
-    }
+		svg {
+			padding-left: 10px;
+		}
+	}
 
-    input {
-        outline-style: none;
-        width: 100%;
-        border-radius: 0px;
-        border-width: 0px;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0);
-        color: rgb(20, 23, 26);
-        font-weight: 400px;
-        font-size: 15px;
-    }
-    
+	input {
+		outline-style: none;
+		width: 100%;
+		border-radius: 0px;
+		border-width: 0px;
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0);
+		color: rgb(20, 23, 26);
+		font-weight: 400px;
+		font-size: 15px;
+	}
 }
-
-

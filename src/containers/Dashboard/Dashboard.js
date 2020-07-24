@@ -12,50 +12,61 @@ import { CREATE_TWEET, GET_TWEETS } from '../../queries/queries';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 
 const Dashboard = () => {
-    const [content, setContent] = useState('');
-    const { loading, error, data } = useQuery(GET_TWEETS);
-    const [createTweet] = useMutation(CREATE_TWEET);
+	const [content, setContent] = useState('');
+	const { loading, error, data } = useQuery(GET_TWEETS);
+	const [createTweet] = useMutation(CREATE_TWEET);
 
-    const sendTweet = (tweet) => {
-        createTweet({
-            variables: {
-                content: tweet
-            },
-            refetchQueries: [{ query: GET_TWEETS }]
-        });
-    };
+	const sendTweet = (tweet) => {
+		createTweet({
+			variables: {
+				content: tweet,
+			},
+			refetchQueries: [{ query: GET_TWEETS }],
+		});
+	};
 
-    return (
-        <div className={styles.dashboard}>
-            <Header />
-            <main className={styles.banner}>
-                <div className={styles.container}>
-                    <div className={styles.divider}>
-                        <Center
-                            header={
-                                <Home />
-                            }
-                            section={
-                                <Editor sendTweet={(tweet) => sendTweet(tweet)} handleChange={(content) => setContent(content)} content={content} />
-                            }
-                            body={
-                                <List>
-                                    <ApolloWrapper loading={loading} error={error} data ={data}>
-                                        {data ? data.tweets.map((value, i) =>
-                                                <Tweet
-                                                    key={i}
-                                                    tweetContent={value}>
-                                                </Tweet>) : null}
-                                    </ApolloWrapper>
-                                </List>
-                            }
-                        />
-                        <RightSection />
-                    </div>
-                </div>
-            </main>
-        </div>
-    );
-}
+	return (
+		<div className={styles.dashboard}>
+			<Header />
+			<main className={styles.banner}>
+				<div className={styles.container}>
+					<div className={styles.divider}>
+						<Center
+							header={<Home />}
+							section={
+								<Editor
+									sendTweet={(tweet) => sendTweet(tweet)}
+									handleChange={(content) =>
+										setContent(content)
+									}
+									content={content}
+								/>
+							}
+							body={
+								<List>
+									<ApolloWrapper
+										loading={loading}
+										error={error}
+										data={data}>
+										{data
+											? data.tweets.map((value, i) => (
+													<Tweet
+														key={i}
+														tweetContent={
+															value
+														}></Tweet>
+											  ))
+											: null}
+									</ApolloWrapper>
+								</List>
+							}
+						/>
+						<RightSection />
+					</div>
+				</div>
+			</main>
+		</div>
+	);
+};
 
 export default Dashboard;

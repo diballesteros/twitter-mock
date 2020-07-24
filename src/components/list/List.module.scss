@@ -1,7 +1,7 @@
 .list {
-    composes: scrollbar from '../../scss/Common.module.scss';
-    width: 100%;
-    justify-self: center;
-    height: 100%;
-    overflow-y : auto;
+	composes: scrollbar from '../../scss/Common.module.scss';
+	width: 100%;
+	justify-self: center;
+	height: 100%;
+	overflow-y: auto;
 }

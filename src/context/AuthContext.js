@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default React.createContext({
-    token: null,
-    login: () => {},
-    logout: () => {}
+	token: null,
+	login: () => {},
+	logout: () => {},
 });

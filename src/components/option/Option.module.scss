@@ -1,37 +1,37 @@
 .option {
-    display: flex;
-    align-items: flex-start;
-    text-decoration: none;
-    padding: 7px 0;
+	display: flex;
+	align-items: flex-start;
+	text-decoration: none;
+	padding: 7px 0;
 
-    > div {
-        display: flex;
-        position: relative;
-        flex-direction: row;
-        padding: 10px;
-        max-width: 100%;
-        align-items: center;
-        justify-content: center;
-        border-radius: 9999px;
+	> div {
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		padding: 10px;
+		max-width: 100%;
+		align-items: center;
+		justify-content: center;
+		border-radius: 9999px;
 
-        .text {
-            font-size: 19px;
-            color: rgb(20, 23, 26);
-            font-weight: bold;
-            margin-left: 20px;
-            margin-right: 15px;
-        }
-    }
+		.text {
+			font-size: 19px;
+			color: rgb(20, 23, 26);
+			font-weight: bold;
+			margin-left: 20px;
+			margin-right: 15px;
+		}
+	}
 
-    &:hover > div {
-        background-color: rgba(29, 161, 242, 0.1);
-    }
+	&:hover > div {
+		background-color: rgba(29, 161, 242, 0.1);
+	}
 
-    &:hover .text {
-        color: rgb(29, 161, 242);
-    }
+	&:hover .text {
+		color: rgb(29, 161, 242);
+	}
 
-    :hover .icon path {
-        fill: rgb(29, 161, 242);
-    }
+	:hover .icon path {
+		fill: rgb(29, 161, 242);
+	}
 }
